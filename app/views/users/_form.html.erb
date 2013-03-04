@@ -11,19 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+ 
+    <%= f.submit "Create User", class: "btn btn-large btn-primary" %>
 <% end %>

@@ -1,11 +1,8 @@
-<h1>Listing feeds</h1>
-
+<h1>Latest Feeds</h1>
 <table>
   <tr>
     <th>Title</th>
     <th>User</th>
-    <th>Private</th>
-    <th>Permission</th>
     <th>Body</th>
     <th></th>
     <th></th>
@@ -14,18 +11,18 @@
 
 <% @feeds.each do |feed| %>
   <tr>
-    <td><%= feed.title %></td>
-    <td><%= feed.user_id %></td>
-    <td><%= feed.private %></td>
-    <td><%= feed.permission_id %></td>
+    <td><%= link_to feed.title , feed%></td>
+    <td><%= feed.user.name %></td>
     <td><%= feed.body %></td>
-    <td><%= link_to 'Show', feed %></td>
+    <% if signed_in? and (feed.user_id == current_user.id) %>
     <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
-    <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Delete', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Feed', new_feed_path %>
+<% if signed_in? %>
+   <%= link_to 'New Feed', new_feed_path %>
+<% end %>

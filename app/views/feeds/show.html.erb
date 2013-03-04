@@ -6,18 +6,8 @@
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @feed.user_id %>
-</p>
-
-<p>
   <b>Private:</b>
   <%= @feed.private %>
-</p>
-
-<p>
-  <b>Permission:</b>
-  <%= @feed.permission_id %>
 </p>
 
 <p>
@@ -25,6 +15,7 @@
   <%= @feed.body %>
 </p>
 
-
-<%= link_to 'Edit', edit_feed_path(@feed) %> |
-<%= link_to 'Back', feeds_path %>
+<% if signed_in? and (@feed.user_id == current_user.id) %>
+  <%= link_to 'Edit', edit_feed_path(@feed) %> |
+  <%= link_to 'Back', feeds_path %>
+<% end %>
