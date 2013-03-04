@@ -50,8 +50,6 @@ class FeedsController < ApplicationController
     @feed = Feed.find(params[:id])
     @feed.destroy
 
-    respond_to do |format|
-      format.html { redirect_to feeds_url }
-    end
+    redirect_to feeds_url 
   end
 end
