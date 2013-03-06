@@ -49,6 +49,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def permission
+     
+  end
+
+
   # DELETE /users/1
   def destroy
     @user = User.find(params[:id])

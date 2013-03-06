@@ -29,18 +29,18 @@ Feature: Feed testing
 		And a feed listing
 		When they view the feed listing
 		Then they see a list of all public feeds 
-	#   And the private feed with permission
+	   And the private feed with permission
 
-    #Scenario: Click on private feed with permissions
-	#	Given a logged in user
-	#	And one private feed with permission
-	#	When they click on a feed
-	#	Then they are taken to the feed page
+    Scenario: Click on private feed with permissions
+		Given a logged in user
+		And one private feed with permission
+		When they click on a feed
+		Then they are taken to the feed page
 
-	#Scenario: Click on private feed without permissions
-	#	Given a logged in user
-	#	And one private feed without permission
-	#	When they click on a feed
-	#	Then they are not taken to the feed page
+	Scenario: Click on private feed without permissions
+		Given a logged in user
+		And one private feed without permission
+		When they click on a feed
+		Then they are not taken to the feed page
 
 	

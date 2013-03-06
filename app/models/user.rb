@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   has_many :feeds
+  has_many :permissions
 
   before_save { email.downcase! }
   before_save :create_remember_token
