@@ -15,7 +15,8 @@ class FeedsController < ApplicationController
       @permissions = Permission.find(:all, :conditions => {:user_id => current_user})
       @feeds.keep_if{ |feed| 
        (feed.private == false) ||
-       (@permissions.find(:feed_id => feed.id) != nil)
+       (feed.user_id == current_user.id) ||
+       (Permission.find(:all, :conditions => {:user_id => current_user, :feed_id => feed.id}) != [])
       }
     else
       @feeds.keep_if{|feed| feed.private == false}
@@ -85,7 +86,7 @@ class FeedsController < ApplicationController
       #if user is logged in check other conditions     
       if current_user != nil 
         #if user owns feed grant permission 
-        @premission_granted = true if( params[:id] == current_user) 
+        @premission_granted = true if( Feed.find(params[:id]).user_id == current_user.id) 
 
         #if user has matching record in permissions table, grant permission
         @permissions = Permission.find(:all, :conditions => {:user_id => current_user, :feed_id => params[:id]})

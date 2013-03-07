@@ -9,7 +9,7 @@ Feature: Feed testing
 	Scenario: Click on public feed 
 		Given a visitor with a username
 		And a feed listing
-		When they click on a feed
+		When they click on a public feed
 		Then they see that feed page
 
 	Scenario: Edit a feed
@@ -25,22 +25,21 @@ Feature: Feed testing
 		Then they see a list of all public feeds
 
 	Scenario: Logged in user feed listings
-		Given a logged in user
-		And a feed listing
+		Given a feed listing
+		And a signed in user with permission to the private feed
 		When they view the feed listing
-		Then they see a list of all public feeds 
-	   And the private feed with permission
+		Then they see a list of all public feed and private feeds with permission
 
     Scenario: Click on private feed with permissions
-		Given a logged in user
-		And one private feed with permission
-		When they click on a feed
-		Then they are taken to the feed page
+		Given a feed listing
+		And a signed in user with permission to the private feed
+		When they click on a private feed
+		Then they see that feed page
 
 	Scenario: Click on private feed without permissions
-		Given a logged in user
-		And one private feed without permission
-		When they click on a feed
+		Given a feed listing
+		And a signed in user without permission to the private feed
+		When they go to the URL
 		Then they are not taken to the feed page
 
 	

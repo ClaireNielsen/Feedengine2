@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= collection_select(:permission, :user_id, User.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :feed_id %><br />
-    <%= f.number_field :feed_id %>
+    <%= collection_select(:permission, :feed_id, Feed.find(:all, :conditions => {:user_id => current_user, :private => true}), :id, :title) %>
   </div>
   <div class="actions">
     <%= f.submit %>

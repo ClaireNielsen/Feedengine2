@@ -11,11 +11,11 @@
 
 <% @permissions.each do |permission| %>
   <tr>
-    <td><%= permission.user_id %></td>
-    <td><%= permission.feed_id %></td>
-    <td><%= link_to 'Show', permission %></td>
-    <td><%= link_to 'Edit', edit_permission_path(permission) %></td>
+    <td><%= permission.user.name %></td>
+    <td><%= permission.feed.title %></td>
+    <% if  permission.feed.user_id == current_user.id %>
     <td><%= link_to 'Destroy', permission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

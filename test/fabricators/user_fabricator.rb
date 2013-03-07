@@ -11,3 +11,8 @@ end
 Fabricator(:feed) do
 	body Faker::Lorem.words(3)
 end
+
+Fabricator(:permission) do
+	feed_id '1'
+	user_id '1'
+end

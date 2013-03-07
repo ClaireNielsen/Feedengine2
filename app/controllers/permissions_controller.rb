@@ -1,16 +1,12 @@
 class PermissionsController < ApplicationController
   
   before_filter :signed_in_user, 
-                only: [:new, :create :destroy]
-  before_filter :correct_user,   only: [:new, :create, :destroy]
-
-  belongs_to :user
-  belongs_to :feed
+                only: [:index, :new, :create, :destroy]
 
   # GET /permissions
-  #def index
-  # @permissions = Permission.all
-  #end
+  def index
+   @permissions = Permission.all
+  end
 
   # GET /permissions/1
   #def show
@@ -19,20 +15,22 @@ class PermissionsController < ApplicationController
 
   # GET /permissions/new
   def new
+    @user = User.all
+    @feed = Feed.find(:all, :conditions => {:user_id => current_user})
     @permission = Permission.new
   end
 
   # GET /permissions/1/edit
   #def edit
   # @permission = Permission.find(params[:id])
-  #nd
+  #end
 
   # POST /permissions
   def create
     @permission = Permission.new(params[:permission])
 
     if @permission.save
-      redirect_to @permission, notice: 'Permission was successfully created.' 
+      redirect_to permissions_path, notice: 'Permission was successfully created.' 
     else
       render action: "new" 
     end
@@ -40,13 +38,13 @@ class PermissionsController < ApplicationController
 
   # PUT /permissions/1
   #def update
-   # @permission = Permission.find(params[:id])
+  #  @permission = Permission.find(params[:id])
 
-   # if @permission.update_attributes(params[:permission])
-    #  redirect_to @permission, notice: 'Permission was successfully updated.' 
-    #else
-   #   render action: "edit" 
-    #end
+  #  if @permission.update_attributes(params[:permission])
+   #   redirect_to @permission, notice: 'Permission was successfully updated.' 
+  #  else
+  #    render action: "edit" 
+  #  end
 
   #end
 
@@ -57,12 +55,5 @@ class PermissionsController < ApplicationController
 
     redirect_to permissions_url 
   end
-
-  private
-
-    def correct_user
-      @feeds = current_user.feeds.find_by_id(params[:id])
-      redirect_to root_url if @feeds.nil?
-    end
 
 end
