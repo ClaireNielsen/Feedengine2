@@ -37773,3 +37773,1104 @@ Processing by FeedsController#index as HTML
   Rendered layouts/_header.html.erb (0.6ms)
 Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.6ms)
   [1m[35m (0.3ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (2.7ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-03-08 11:15:29 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (515.2ms)
+  Rendered users/new.html.erb within layouts/application (563.0ms)
+  [1m[35mUser Load (26.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (94.5ms)
+Completed 200 OK in 912ms (Views: 747.4ms | ActiveRecord: 42.4ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-08 11:15:30 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Einar Kertzmann", "email"=>"isidro_klocko@vonyost.org", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (139.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:31 UTC +00:00], ["email", "isidro_klocko@vonyost.org"], ["name", "Einar Kertzmann"], ["password", nil], ["password_digest", "$2a$10$gn70BpXWw2sJ6Cc2rI7bY.9unqVV2bV966o65E7E/TS/xe7K5o6MK"], ["remember_token", "dVo0O4le9PKKVygcbqY1Fw"], ["updated_at", Fri, 08 Mar 2013 16:15:31 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 262ms (ActiveRecord: 139.4ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-08 11:15:31 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'dVo0O4le9PKKVygcbqY1Fw' LIMIT 1
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 134ms (Views: 131.8ms | ActiveRecord: 0.4ms)
+Started GET "/feeds/new" for 127.0.0.1 at 2013-03-08 11:15:31 -0500
+Processing by FeedsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'dVo0O4le9PKKVygcbqY1Fw' LIMIT 1[0m
+  Rendered feeds/_form.html.erb (236.1ms)
+  Rendered feeds/new.html.erb within layouts/application (1037.0ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 1291ms (Views: 1279.6ms | ActiveRecord: 0.5ms)
+Started POST "/feeds" for 127.0.0.1 at 2013-03-08 11:15:38 -0500
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "feed"=>{"title"=>"laborum", "private"=>"0", "body"=>"Quam possimus qui illo omnis magnam labore expedita et."}, "commit"=>"Create Feed"}
+  [1m[35mUser Load (32.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'dVo0O4le9PKKVygcbqY1Fw' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (106.6ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Quam possimus qui illo omnis magnam labore expedita et."], ["created_at", Fri, 08 Mar 2013 16:15:38 UTC +00:00], ["private", false], ["title", "laborum"], ["updated_at", Fri, 08 Mar 2013 16:15:38 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/feeds/1
+Completed 302 Found in 936ms (ActiveRecord: 139.2ms)
+Started GET "/feeds/1" for 127.0.0.1 at 2013-03-08 11:15:39 -0500
+Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'dVo0O4le9PKKVygcbqY1Fw' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1 AND "permissions"."feed_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered feeds/show.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 42ms (Views: 35.8ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-03-08 11:15:39 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (89.3ms)
+Completed 200 OK in 104ms (Views: 94.2ms | ActiveRecord: 0.2ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-08 11:15:39 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Ethel Dach", "email"=>"jolie@klocko.info", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00], ["email", "jolie@klocko.info"], ["name", "Ethel Dach"], ["password", nil], ["password_digest", "$2a$10$aZnms1CXXFDSCJiDk6hl9e5CkW1GOGVucZSeNf768FrIAOZ46p9l."], ["remember_token", "XmB49VdyQGwZwhj70q-jAw"], ["updated_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 125ms (ActiveRecord: 1.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-08 11:15:39 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'XmB49VdyQGwZwhj70q-jAw' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+Started DELETE "/signout" for 127.0.0.1 at 2013-03-08 11:15:39 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:15:39 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (1.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Louie Stroman1"], ["password", nil], ["password_digest", "$2a$10$9WH8vNGmy2QrKPqjifLph.CSji6RQgWAMMoupHCGqvidSTD9VII6C"], ["remember_token", "Pudd49D_DoiHk5zwvY4aFw"], ["updated_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Louie Stroman1"], ["created_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00], ["private", false], ["title", "One_apple"], ["updated_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00], ["user_id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Dahlia Kub2"], ["password", nil], ["password_digest", "$2a$10$3/aNoHGnhZ73fUwrHxUFvulwPWgEglCncQUVHlLoCgTeI3evm.eVe"], ["remember_token", "eHKS1mRmYO_JmKTMH_wmzQ"], ["updated_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Dahlia Kub2"], ["created_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00], ["private", false], ["title", "Two_oranges"], ["updated_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00], ["user_id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Irwin Hickle3"], ["password", nil], ["password_digest", "$2a$10$NhrKfPYfKYlDDDz.vRZiGekgrnogka.jzdDWRvR484ZA671RiOy2y"], ["remember_token", "RR8NO4poeB006irCfEsNTA"], ["updated_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Irwin Hickle3"], ["created_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00], ["private", true], ["title", "Three_grapes"], ["updated_at", Fri, 08 Mar 2013 16:15:39 UTC +00:00], ["user_id", 4]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/feeds" for 127.0.0.1 at 2013-03-08 11:15:39 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (67.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 0.7ms)
+Started GET "/feeds/1" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered feeds/show.html.erb within layouts/application (0.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (11.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Miss Michele Muller", "email"=>"lillie@leannon.name", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["email", "lillie@leannon.name"], ["name", "Miss Michele Muller"], ["password", nil], ["password_digest", "$2a$10$O1Ce9jT1vn2uTO/GQZZgoe7dZTpyPYtXFr9OXzlf6jsP82ScwWcY2"], ["remember_token", "J5OkwE--0o83ahDdhEHI5g"], ["updated_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 103ms (ActiveRecord: 0.9ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'J5OkwE--0o83ahDdhEHI5g' LIMIT 1
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+Started GET "/feeds/new" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by FeedsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'J5OkwE--0o83ahDdhEHI5g' LIMIT 1[0m
+  Rendered feeds/_form.html.erb (2.5ms)
+  Rendered feeds/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+Started POST "/feeds" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "feed"=>{"title"=>"soluta", "private"=>"0", "body"=>"Molestias id commodi laborum omnis neque voluptas at quis."}, "commit"=>"Create Feed"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'J5OkwE--0o83ahDdhEHI5g' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Molestias id commodi laborum omnis neque voluptas at quis."], ["created_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["private", false], ["title", "soluta"], ["updated_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/feeds/1
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+Started GET "/feeds/1" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'J5OkwE--0o83ahDdhEHI5g' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1 AND "permissions"."feed_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered feeds/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+Started GET "/feeds/1/edit" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by FeedsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'J5OkwE--0o83ahDdhEHI5g' LIMIT 1[0m
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."user_id" = 1 AND "feeds"."id" = 1 LIMIT 1
+  [1m[36mFeed Load (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered feeds/_form.html.erb (2.6ms)
+  Rendered feeds/edit.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+Started PUT "/feeds/1" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by FeedsController#update as HTML
+  Parameters: {"utf8"=>"✓", "feed"=>{"title"=>"AA", "private"=>"0", "body"=>"AA"}, "commit"=>"Update Feed", "id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'J5OkwE--0o83ahDdhEHI5g' LIMIT 1
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (9.6ms)[0m  [1mUPDATE "feeds" SET "title" = 'AA', "body" = 'AA', "updated_at" = '2013-03-08 16:15:40.396722' WHERE "feeds"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/feeds/1
+Completed 302 Found in 36ms (ActiveRecord: 10.1ms)
+Started GET "/feeds/1" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'J5OkwE--0o83ahDdhEHI5g' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1 AND "permissions"."feed_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered feeds/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Mr. Vinnie Durgan", "email"=>"summer@nolanbreitenberg.net", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["email", "summer@nolanbreitenberg.net"], ["name", "Mr. Vinnie Durgan"], ["password", nil], ["password_digest", "$2a$10$Wd1MNEZVfEorVovCI6I/Yu6cy47ToFWOTgoEb1p7cYDSbbALJBVPy"], ["remember_token", "JnMsK8adyTGSC2VDTwfW7Q"], ["updated_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 129ms (ActiveRecord: 0.9ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'JnMsK8adyTGSC2VDTwfW7Q' LIMIT 1
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+Started DELETE "/signout" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (0.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Kristopher Stamm1"], ["password", nil], ["password_digest", "$2a$10$gBYTdHlqF0JJvEJdXPTZcuhn9GwjcoG1U3TsPK7MabMivHVHVZnuq"], ["remember_token", "W0elFPxvxoIOFGKZ3A7RbA"], ["updated_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Kristopher Stamm1"], ["created_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["private", false], ["title", "One_apple"], ["updated_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Maxie Schaden II2"], ["password", nil], ["password_digest", "$2a$10$EUSMP8QTyc8c2Xy9SNZRQ.EDHNWn2nXIiTWAK0ug0f/0OYX3mq7FO"], ["remember_token", "NLfVo-1gnnjEQJn7GGBfOA"], ["updated_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Maxie Schaden II2"], ["created_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["private", false], ["title", "Two_oranges"], ["updated_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["user_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Neva Dooley3"], ["password", nil], ["password_digest", "$2a$10$v8Ym5Iesl3ZFdPw14ZV.2O3ml1ptqaYvYg8IhkC8AAL3a5NUfxD92"], ["remember_token", "th8bwl_ts2-Ym54660uJjw"], ["updated_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Neva Dooley3"], ["created_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["private", true], ["title", "Three_grapes"], ["updated_at", Fri, 08 Mar 2013 16:15:40 UTC +00:00], ["user_id", 4]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/feeds" for 127.0.0.1 at 2013-03-08 11:15:40 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (2.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms)
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Selmer Upton DVM1"], ["password", nil], ["password_digest", "$2a$10$v9T/OWb.0J4zy2etzKe8fOAL0WswdRNO/a2sdc1OFbpDBXKaS6wma"], ["remember_token", "ELXe6_TPmuto8pRLD4ptPQ"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Selmer Upton DVM1"], ["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["private", false], ["title", "One_apple"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Joana Cummerata2"], ["password", nil], ["password_digest", "$2a$10$Qh/uk1sH4vxMUbk1m80zkOBYOBodS.mHhcUGAokLTlqpfqeHBZ/Qu"], ["remember_token", "nGMvB5GmBLym5KmYJbeWDg"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Joana Cummerata2"], ["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["private", false], ["title", "Two_oranges"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Gabrielle Murphy IV3"], ["password", nil], ["password_digest", "$2a$10$sBtBkrI1nmJV8eEHsA588ueaXRwi0NY5QgNpSOV8qd.GhASlLTDlm"], ["remember_token", "5ZT-yc5zHKui1tkwAHOg0Q"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Gabrielle Murphy IV3"], ["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["private", true], ["title", "Three_grapes"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["user_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "permissions" ("created_at", "feed_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["feed_id", 3], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-03-08 11:15:41 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (7.2ms)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-03-08 11:15:41 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"taryn.metz@swaniawski.name", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'taryn.metz@swaniawski.name' LIMIT 1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 95ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:15:41 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ELXe6_TPmuto8pRLD4ptPQ' LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1 AND "permissions"."feed_id" = 3[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.7ms)
+Started GET "/feeds" for 127.0.0.1 at 2013-03-08 11:15:41 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ELXe6_TPmuto8pRLD4ptPQ' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1 AND "permissions"."feed_id" = 3
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.6ms)
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Gus O'Connell1"], ["password", nil], ["password_digest", "$2a$10$eikXiwOQ/1mglOw3QDJ4bOqAJUzWr/3CYjvK1Ft.sglPLvzke6f2i"], ["remember_token", "91rmVlaWGlhDkDl33zNoOg"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Gus O'Connell1"], ["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["private", false], ["title", "One_apple"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Jamel Hyatt2"], ["password", nil], ["password_digest", "$2a$10$oDATLBbCC4TmX5dWaDMbKufJNS.fJRnFLzTf.8TQGvlRtCLPAPf06"], ["remember_token", "D8OuedFbY7AWCotmGkxN0g"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Jamel Hyatt2"], ["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["private", false], ["title", "Two_oranges"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Howell Tromp3"], ["password", nil], ["password_digest", "$2a$10$xnfrgbckFIJrJ4vk6OCMmOlDhbMAmDDMt9kvxIFaClv1wf.6czjDS"], ["remember_token", "dTMPEf_REpfGm-ihr20dFA"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Howell Tromp3"], ["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["private", true], ["title", "Three_grapes"], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["user_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "permissions" ("created_at", "feed_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["feed_id", 3], ["updated_at", Fri, 08 Mar 2013 16:15:41 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-03-08 11:15:41 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-03-08 11:15:41 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"taryn.metz@swaniawski.name", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'taryn.metz@swaniawski.name' LIMIT 1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 114ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:15:42 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '91rmVlaWGlhDkDl33zNoOg' LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1 AND "permissions"."feed_id" = 3[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.7ms)
+Started GET "/feeds" for 127.0.0.1 at 2013-03-08 11:15:42 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '91rmVlaWGlhDkDl33zNoOg' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1 AND "permissions"."feed_id" = 3
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.6ms)
+Started GET "/feeds/3" for 127.0.0.1 at 2013-03-08 11:15:42 -0500
+Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '91rmVlaWGlhDkDl33zNoOg' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1 AND "permissions"."feed_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered feeds/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Mrs. Roselyn Kling1"], ["password", nil], ["password_digest", "$2a$10$wq4rTY01qvMwAjxOndvpwuXYdWd.RKtx.Jn/j5oujxDft2gMwC/ka"], ["remember_token", "lnYNkH8vAUOnIRQeANkOeQ"], ["updated_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Mrs. Roselyn Kling1"], ["created_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00], ["private", false], ["title", "One_apple"], ["updated_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Mrs. Kaitlyn Bartoletti2"], ["password", nil], ["password_digest", "$2a$10$eW74w9Y9M1oBD9iLMOFv.u2F0CHCVQ.XfgIVfz8K.U4jfMoybN63S"], ["remember_token", "ZR8M3NozcoQTO7c7Vk-t5A"], ["updated_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Mrs. Kaitlyn Bartoletti2"], ["created_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00], ["private", false], ["title", "Two_oranges"], ["updated_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00], ["user_id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00], ["email", "taryn.metz@swaniawski.name"], ["name", "Pierce Boehm3"], ["password", nil], ["password_digest", "$2a$10$d29cdvYnPH3UhOQCRG2Pquq0Daz49.LoM32Qj4zgmUTal2AkEWDua"], ["remember_token", "kW05iRFlaC8I2Q9VJRQLrw"], ["updated_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Pierce Boehm3"], ["created_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00], ["private", true], ["title", "Three_grapes"], ["updated_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00], ["user_id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "permissions" ("created_at", "feed_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00], ["feed_id", 3], ["updated_at", Fri, 08 Mar 2013 16:15:42 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/signin" for 127.0.0.1 at 2013-03-08 11:15:42 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-03-08 11:15:42 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"taryn.metz@swaniawski.name", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'taryn.metz@swaniawski.name' LIMIT 1
+Redirected to http://www.example.com/
+Completed 302 Found in 120ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:15:42 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'lnYNkH8vAUOnIRQeANkOeQ' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mPermission Load (0.2ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1 AND "permissions"."feed_id" = 3
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 14ms (Views: 6.0ms | ActiveRecord: 1.1ms)
+Started GET "/feeds/3" for 127.0.0.1 at 2013-03-08 11:15:42 -0500
+Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'lnYNkH8vAUOnIRQeANkOeQ' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1 AND "permissions"."feed_id" = 3
+Redirected to http://www.example.com/
+Filter chain halted as :permission_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:15:42 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'lnYNkH8vAUOnIRQeANkOeQ' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1 AND "permissions"."feed_id" = 3
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.7ms)
+  [1m[36m (127.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-03-08 11:15:43 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (67.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (72.4ms)
+Completed 200 OK in 78ms (Views: 9.7ms | ActiveRecord: 67.7ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-08 11:15:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Tess Kshlerin", "email"=>"kelli@crona.info", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:15:43 UTC +00:00], ["email", "kelli@crona.info"], ["name", "Tess Kshlerin"], ["password", nil], ["password_digest", "$2a$10$MN2wanxiPvDOtZoJfzjPTeP.LxranM3km1sqkbZIoorG2J9jcxC/6"], ["remember_token", "mI47ZXHjuez0jcjVN4ffeg"], ["updated_at", Fri, 08 Mar 2013 16:15:43 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 134ms (ActiveRecord: 1.1ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-08 11:15:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'mI47ZXHjuez0jcjVN4ffeg' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (168.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-03-08 11:15:44 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+  [1m[35mUser Load (42.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (45.4ms)
+Completed 200 OK in 51ms (Views: 8.4ms | ActiveRecord: 42.7ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-08 11:15:44 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Isidro Lockman MD", "email"=>"justina@manteemard.net", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:45 UTC +00:00], ["email", "justina@manteemard.net"], ["name", "Isidro Lockman MD"], ["password", nil], ["password_digest", "$2a$10$YYKM4KPsqzN9ipq7Fc59r.R2Pgylqb3H3iH1qHHU0wMrJB0/5hv/q"], ["remember_token", "vhjRqF8Rk66jLKdwBmHLHg"], ["updated_at", Fri, 08 Mar 2013 16:15:45 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 235ms (ActiveRecord: 1.2ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-08 11:15:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'vhjRqF8Rk66jLKdwBmHLHg' LIMIT 1
+  Rendered layouts/_header.html.erb (3.5ms)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 1.4ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-03-08 11:15:45 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'vhjRqF8Rk66jLKdwBmHLHg' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/edit.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 419ms (Views: 155.4ms | ActiveRecord: 0.3ms)
+Started PUT "/users/1" for 127.0.0.1 at 2013-03-08 11:15:45 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"AIsidro Lockman MD", "email"=>"Ajustina@manteemard.net", "password"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'vhjRqF8Rk66jLKdwBmHLHg' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (72.5ms)[0m  UPDATE "users" SET "name" = 'AIsidro Lockman MD', "email" = 'ajustina@manteemard.net', "password_digest" = '$2a$10$BmbhhB3YV/QqWEH7YbsR..pnPSUvhj1i35nAXv7cdFgYwHOrLNxBy', "remember_token" = 'PbTBTHJPw1ym9JXjJW9xMw', "updated_at" = '2013-03-08 16:15:45.699967' WHERE "users"."id" = 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 355ms (ActiveRecord: 72.8ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-08 11:15:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'PbTBTHJPw1ym9JXjJW9xMw' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-03-08 11:15:45 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.1ms)
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-08 11:15:46 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Nova Stanton", "email"=>"krystina@waelchi.biz", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:46 UTC +00:00], ["email", "krystina@waelchi.biz"], ["name", "Nova Stanton"], ["password", nil], ["password_digest", "$2a$10$XeLUKr2NshyHjQV9jcw3UOSB9QMA3LA54MWOcWDHq1E3e2tfpD0hq"], ["remember_token", "FlKxyc0ZTnB0_OknXQsojw"], ["updated_at", Fri, 08 Mar 2013 16:15:46 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 102ms (ActiveRecord: 1.5ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-08 11:15:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'FlKxyc0ZTnB0_OknXQsojw' LIMIT 1
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.5ms)
+Started DELETE "/signout" for 127.0.0.1 at 2013-03-08 11:15:46 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:15:46 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (0.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Started GET "/signin" for 127.0.0.1 at 2013-03-08 11:15:46 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-03-08 11:15:46 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"krystina@waelchi.biz", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'krystina@waelchi.biz' LIMIT 1
+Redirected to http://www.example.com/
+Completed 302 Found in 4864ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:15:52 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (431.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'FlKxyc0ZTnB0_OknXQsojw' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  Rendered feeds/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 648ms (Views: 41.7ms | ActiveRecord: 431.4ms)
+  [1m[35m (11.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-03-08 11:15:53 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.7ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (27.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (30.2ms)
+Completed 200 OK in 36ms (Views: 7.7ms | ActiveRecord: 27.7ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-08 11:15:53 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Estell Little", "email"=>"zetta@emard.org", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (265.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:15:54 UTC +00:00], ["email", "zetta@emard.org"], ["name", "Estell Little"], ["password", nil], ["password_digest", "$2a$10$i8pQzBu0raZSA.7CK.c1bOcw4Cp0ZMmDMvoe8Veh4s5/vI43jKgTm"], ["remember_token", "4VfQM4lu1lOfPXEx7RU-cw"], ["updated_at", Fri, 08 Mar 2013 16:15:54 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 1110ms (ActiveRecord: 266.1ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '4VfQM4lu1lOfPXEx7RU-cw' LIMIT 1
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+Started DELETE "/signout" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (0.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+Started GET "/signin" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"zetta@emard.org", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'zetta@emard.org' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 129ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.9ms)
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (7.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (8.9ms)
+Completed 200 OK in 13ms (Views: 5.5ms | ActiveRecord: 7.1ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Skyla Bins", "email"=>"fredy@beierschiller.biz", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:15:54 UTC +00:00], ["email", "fredy@beierschiller.biz"], ["name", "Skyla Bins"], ["password", nil], ["password_digest", "$2a$10$GQfBm8VxswzdlF6s078K5OJ82lFu.7r1GnTJO7jHcfnYRXysmhlmu"], ["remember_token", "jxAlimd5D_viXy5uwxwCvg"], ["updated_at", Fri, 08 Mar 2013 16:15:54 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 115ms (ActiveRecord: 0.9ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'jxAlimd5D_viXy5uwxwCvg' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.6ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 2.2ms)
+Started DELETE "/signout" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (8.2ms)
+  Rendered users/new.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (7.3ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Seth Graham MD", "email"=>"reyes@ward.name", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:15:54 UTC +00:00], ["email", "reyes@ward.name"], ["name", "Seth Graham MD"], ["password", nil], ["password_digest", "$2a$10$q8vFzTa0K3b5s6adBzFAFeSUDuhs0RAAE8PXP.Rg7BHjNaMMlnxb2"], ["remember_token", "JOx9pXrcF2xktmLLDvA4jQ"], ["updated_at", Fri, 08 Mar 2013 16:15:54 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 93ms (ActiveRecord: 0.8ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'JOx9pXrcF2xktmLLDvA4jQ' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+Started DELETE "/signout" for 127.0.0.1 at 2013-03-08 11:15:54 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:15:55 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (20.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (72.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00], ["email", "user1@example.com"], ["name", "User1"], ["password", nil], ["password_digest", "$2a$10$4HESENbLBBNMyIGGiPFyNe.5DzzLWjHCY/Dt/1HUNbdf1b0ILFEHq"], ["remember_token", "VJZMXmRSdNUkgkC_AqlrxA"], ["updated_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00], ["email", "user2@example.com"], ["name", "User2"], ["password", nil], ["password_digest", "$2a$10$zGI910Q6wYFZu5sLf9YZNe10R1JvURp6AXGWta0vA/ZLjhE4zU/jG"], ["remember_token", "Kfs7N5ngn3DfD3fdld-UBQ"], ["updated_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Feed One Text"], ["created_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00], ["private", false], ["title", "Feed One"], ["updated_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Feed Two Text"], ["created_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00], ["private", true], ["title", "Feed Two"], ["updated_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Feed Three Text"], ["created_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00], ["private", true], ["title", "Feed Three"], ["updated_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "permissions" ("created_at", "feed_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00], ["feed_id", 2], ["updated_at", Fri, 08 Mar 2013 16:18:57 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/feeds" for 127.0.0.1 at 2013-03-08 11:18:57 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (11.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (112.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 204ms (Views: 181.1ms | ActiveRecord: 11.6ms)
+  [1m[36m (43.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (120.6ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00], ["email", "user1@example.com"], ["name", "User1"], ["password", nil], ["password_digest", "$2a$10$Eybfq2Kas2xQvgkCatunTuw1Fv0Egk02gAGnPMKRDmUtkQzLjgqTy"], ["remember_token", "0SauPG3Oc0lPeeP0Ix4klg"], ["updated_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00], ["email", "user2@example.com"], ["name", "User2"], ["password", nil], ["password_digest", "$2a$10$uc8Hq4/wmGy8xtdjYKRTSeBq.QmSzwa6rtalARpZXtCDFNKK1YZv6"], ["remember_token", "UHSeeOe83oW-pUREhjZugw"], ["updated_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Feed One Text"], ["created_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00], ["private", false], ["title", "Feed One"], ["updated_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Feed Two Text"], ["created_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00], ["private", true], ["title", "Feed Two"], ["updated_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Feed Three Text"], ["created_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00], ["private", true], ["title", "Feed Three"], ["updated_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "permissions" ("created_at", "feed_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00], ["feed_id", 2], ["updated_at", Fri, 08 Mar 2013 16:18:59 UTC +00:00], ["user_id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-03-08 11:18:59 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 938ms (Views: 936.8ms | ActiveRecord: 0.4ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-03-08 11:19:00 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"user2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user2@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 210ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:19:00 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'UHSeeOe83oW-pUREhjZugw' LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 2[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 3
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 1.1ms)
+Started GET "/feeds" for 127.0.0.1 at 2013-03-08 11:19:00 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'UHSeeOe83oW-pUREhjZugw' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 2
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 3[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["email", "user1@example.com"], ["name", "User1"], ["password", nil], ["password_digest", "$2a$10$EeK/dbgwHJKa7IC.gQcFtewvYYqHBwOURhpjCa/BregzsixugAN4u"], ["remember_token", "ClWA_ne2vxmm7-fgYcAJEg"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["email", "user2@example.com"], ["name", "User2"], ["password", nil], ["password_digest", "$2a$10$g3EZdaqT13ksf0dQI094Z.k/ioRVMJVc.V2a7GUq4CSvH8ZwP0zlW"], ["remember_token", "z8trcLIP5lzhLsKmPahoNw"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Feed One Text"], ["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["private", false], ["title", "Feed One"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Feed Two Text"], ["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["private", true], ["title", "Feed Two"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Feed Three Text"], ["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["private", true], ["title", "Feed Three"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "permissions" ("created_at", "feed_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["feed_id", 2], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/signin" for 127.0.0.1 at 2013-03-08 11:19:01 -0500
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-03-08 11:19:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"user1@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+Redirected to http://www.example.com/
+Completed 302 Found in 86ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:19:01 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ClWA_ne2vxmm7-fgYcAJEg' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.6ms)
+Started GET "/feeds" for 127.0.0.1 at 2013-03-08 11:19:01 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ClWA_ne2vxmm7-fgYcAJEg' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["email", "user1@example.com"], ["name", "User1"], ["password", nil], ["password_digest", "$2a$10$1hRaa0wrk0FCIVM4xAnaheef7WyQquPojhsCEGGEfPYmzJvLTgJp."], ["remember_token", "Vqwu4MAe_OmnduE-7s96zg"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["email", "user2@example.com"], ["name", "User2"], ["password", nil], ["password_digest", "$2a$10$uS7MT6K36n6ECYz.8soeRex1IVErWxy.fHdpn2X2gnxbUtZ2sAcoq"], ["remember_token", "YuUocw_-gAeHPqZHqnmbEQ"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Feed One Text"], ["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["private", false], ["title", "Feed One"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Feed Two Text"], ["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["private", true], ["title", "Feed Two"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Feed Three Text"], ["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["private", true], ["title", "Feed Three"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "permissions" ("created_at", "feed_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["feed_id", 2], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/feeds/1" for 127.0.0.1 at 2013-03-08 11:19:01 -0500
+Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["email", "user1@example.com"], ["name", "User1"], ["password", nil], ["password_digest", "$2a$10$AsfIQ1GntUjT/ZVVxaDcS.IuvxMZlMzaDtBULSMfFMlJa4tP4yM3e"], ["remember_token", "Lwgg6NBRVCqns3pbpvsFqw"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["email", "user2@example.com"], ["name", "User2"], ["password", nil], ["password_digest", "$2a$10$4bDN3/z4BymZx7eE/N3UXeeC8.gh/1wpT.uMSwH1slOMRLiLh15ly"], ["remember_token", "STkkdh-p6QA-L7t1NWJh9Q"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Feed One Text"], ["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["private", false], ["title", "Feed One"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Feed Two Text"], ["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["private", true], ["title", "Feed Two"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Feed Three Text"], ["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["private", true], ["title", "Feed Three"], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "permissions" ("created_at", "feed_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["feed_id", 2], ["updated_at", Fri, 08 Mar 2013 16:19:01 UTC +00:00], ["user_id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/signin" for 127.0.0.1 at 2013-03-08 11:19:01 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-03-08 11:19:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"user2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user2@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 89ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:19:01 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'STkkdh-p6QA-L7t1NWJh9Q' LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 2[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 3
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.8ms)
+Started GET "/feeds/2" for 127.0.0.1 at 2013-03-08 11:19:01 -0500
+Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'STkkdh-p6QA-L7t1NWJh9Q' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00], ["email", "user1@example.com"], ["name", "User1"], ["password", nil], ["password_digest", "$2a$10$yO35XkM6MMvQsLZRrwW6Le7pGXKP.Xaat28DIFsBop5qh/lwi9QbS"], ["remember_token", "wJ32YWDH82KLzNItuEc8Ug"], ["updated_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00], ["email", "user2@example.com"], ["name", "User2"], ["password", nil], ["password_digest", "$2a$10$q193ll7vFwzbnz/YgzQit.QqNrCj.yuOydpL2aDXzLMzo6.yYLOQS"], ["remember_token", "bkmpcCDdIbhTTQ29N-1uPA"], ["updated_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Feed One Text"], ["created_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00], ["private", false], ["title", "Feed One"], ["updated_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "Feed Two Text"], ["created_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00], ["private", true], ["title", "Feed Two"], ["updated_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Feed Three Text"], ["created_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00], ["private", true], ["title", "Feed Three"], ["updated_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "permissions" ("created_at", "feed_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00], ["feed_id", 2], ["updated_at", Fri, 08 Mar 2013 16:19:02 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/signin" for 127.0.0.1 at 2013-03-08 11:19:02 -0500
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-03-08 11:19:02 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"user2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user2@example.com' LIMIT 1
+Redirected to http://www.example.com/
+Completed 302 Found in 89ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:19:02 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'bkmpcCDdIbhTTQ29N-1uPA' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 2
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 3[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+Started GET "/feeds/3" for 127.0.0.1 at 2013-03-08 11:19:02 -0500
+Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'bkmpcCDdIbhTTQ29N-1uPA' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 3[0m
+Redirected to http://www.example.com/
+Filter chain halted as :permission_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2013-03-08 11:19:02 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'bkmpcCDdIbhTTQ29N-1uPA' LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 2[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2 AND "permissions"."feed_id" = 3
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m

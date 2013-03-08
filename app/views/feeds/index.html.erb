@@ -1,5 +1,5 @@
-<h1>Latest Feeds<h1>
-<table>
+<h1>Latest Feeds</h1>
+<table width="100%">
   <tr>
     <th>Title</th>
     <th>User</th>
@@ -12,8 +12,8 @@
 <% @feeds.each do |feed| %>
   <tr>
     <td><%= link_to feed.title , feed%></td>
-    <td><%= feed.user.name %></td>
-    <td><%= feed.body %></td>
+    <td width = "7%"><%= feed.user.name %></td>
+    <td width = "60%"><%= feed.body %></td>
     <% if signed_in? and (feed.user_id == current_user.id) %>
     <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
     <td><%= link_to 'Delete', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -24,5 +24,7 @@
 
 <br />
 <% if signed_in? %>
-   <%= link_to 'New Feed', new_feed_path %>
+   <div class="feed_link">
+     <%= link_to 'New Feed', new_feed_path %>
+   </div>
 <% end %>

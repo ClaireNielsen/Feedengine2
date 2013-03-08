@@ -75372,3 +75372,2456 @@ Served asset /application.js - 304 Not Modified (1ms)
 
 Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 16:46:52 -0500
 Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-07 17:27:36 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (48.6ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1[0m
+  [1m[35mPermission Load (0.2ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4
+  [1m[36mPermission Load (0.2ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12[0m
+  [1m[35mPermission Load (0.2ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 182ms (Views: 120.0ms | ActiveRecord: 49.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /custom.css - 200 OK (9ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 17:27:37 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-07 17:50:55 -0500
+Connecting to database specified by database.yml
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (15.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (65.0ms)
+Completed 500 Internal Server Error in 439ms
+
+ActionView::Template::Error (Invalid CSS after "  :width ": expected ":", was "75%"
+  (in /home/user/rails_tutorial/feedengine2/app/assets/stylesheets/custom.css.scss)):
+    2: <html>
+    3:   <head>
+    4:     <title>Feedengine2</title>
+    5:     <%= stylesheet_link_tag    "application", media: "all" %>
+    6:     <%= javascript_include_tag "application" %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+  app/assets/stylesheets/custom.css.scss:39
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__950814823__623175908'
+
+
+  Rendered /home/user/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/user/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.8ms)
+  Rendered /home/user/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-07 17:52:30 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.6ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (14.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 71ms
+
+ActionView::Template::Error (Invalid CSS after "  margin": expected ";", was ": 0 auto"
+  (in /home/user/rails_tutorial/feedengine2/app/assets/stylesheets/custom.css.scss)):
+    2: <html>
+    3:   <head>
+    4:     <title>Feedengine2</title>
+    5:     <%= stylesheet_link_tag    "application", media: "all" %>
+    6:     <%= javascript_include_tag "application" %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+  app/assets/stylesheets/custom.css.scss:40
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__950814823__623175908'
+
+
+  Rendered /home/user/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/user/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/user/.rvm/gems/ruby-1.9.3-p362/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-07 17:52:58 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  [1m[36mPermission Load (0.2ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (10.2ms)
+Compiled custom.css  (1206ms)  (pid 4895)
+Compiled application.css  (2ms)  (pid 4895)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 1690ms (Views: 1684.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /permissions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /feeds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /custom.css - 200 OK (11ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /feeds.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /permissions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /bootstrap.js - 304 Not Modified (105ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 17:53:00 -0500
+Served asset /application.js - 200 OK (51ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-07 18:11:02 -0500
+Connecting to database specified by database.yml
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (12.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (51.2ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 626ms (Views: 490.6ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /permissions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /feeds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /custom.css - 200 OK (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /scaffolds.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /jquery.js - 200 OK (14ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /users.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /jquery_ujs.js - 200 OK (5ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /feeds.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /permissions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (69ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /bootstrap.js - 304 Not Modified (38ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:04 -0500
+Served asset /application.js - 200 OK (64ms)
+
+
+Started GET "/permissions" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Processing by PermissionsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = 12 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = 16 LIMIT 1[0m
+  Rendered permissions/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 36.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /permissions.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /custom.css - 200 OK (1ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 18:11:38 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/permissions" for 127.0.0.1 at 2013-03-07 18:13:52 -0500
+Processing by PermissionsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = 12 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mFeed Load (0.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = 16 LIMIT 1[0m
+  Rendered permissions/index.html.erb within layouts/application (8.5ms)
+Compiled custom.css  (1395ms)  (pid 4970)
+Compiled application.css  (3ms)  (pid 4970)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 1671ms (Views: 1666.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:53 -0500
+Served asset /application.css - 304 Not Modified (46ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /custom.css - 200 OK (13ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:54 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 129ms (Views: 125.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /custom.css - 200 OK (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:56 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:57 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:57 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 18:13:57 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.7ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 40ms (Views: 32.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /custom.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 18:28:50 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2013-03-07 18:58:45 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.7ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1[0m
+  [1m[35mPermission Load (0.2ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (10.6ms)
+Compiled custom.css  (1062ms)  (pid 4970)
+Compiled application.css  (2ms)  (pid 4970)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 1204ms (Views: 1196.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /application.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /custom.css - 200 OK (16ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 18:58:46 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2013-03-07 18:59:18 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.6ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4[0m
+  [1m[35mPermission Load (0.2ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (9.9ms)
+Compiled custom.css  (918ms)  (pid 4970)
+Compiled application.css  (2ms)  (pid 4970)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 1058ms (Views: 1041.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /custom.css - 200 OK (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:19 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:20 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:20 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:20 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:20 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:20 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:20 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:20 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:20 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 18:59:20 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1[0m
+  [1m[35mPermission Load (0.2ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 45ms (Views: 39.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /application.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /custom.css - 200 OK (9ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:03 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (24.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /custom.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 19:00:16 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (25.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 54ms (Views: 48.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /custom.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 19:01:15 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  [1m[36mPermission Load (0.2ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 45ms (Views: 39.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /custom.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:20 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/feeds/new" for 127.0.0.1 at 2013-03-07 19:03:26 -0500
+Processing by FeedsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  Rendered feeds/_form.html.erb (483.2ms)
+  Rendered feeds/new.html.erb within layouts/application (493.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 531ms (Views: 528.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /custom.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:27 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started POST "/feeds" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x9kY9rTb5FYCeQe5SecHV7QxHFVGPhYXwmTCWWmKfLE=", "feed"=>{"title"=>"My Feed", "private"=>"1", "body"=>"Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. "}, "commit"=>"Create Feed"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (227.3ms)[0m  [1mINSERT INTO "feeds" ("body", "created_at", "private", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. Lots and lots of text.  Blah Blah Blah. "], ["created_at", Fri, 08 Mar 2013 00:03:57 UTC +00:00], ["private", true], ["title", "My Feed"], ["updated_at", Fri, 08 Mar 2013 00:03:57 UTC +00:00], ["user_id", 4]]
+  [1m[35m (7.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/feeds/17
+Completed 302 Found in 257ms (ActiveRecord: 235.3ms)
+
+
+Started GET "/feeds/17" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 17
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  Rendered feeds/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 65ms (Views: 59.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /custom.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 19:03:57 -0500
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 60ms (Views: 26.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /custom.css - 200 OK (1ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 19:04:01 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2013-03-07 19:11:43 -0500
+Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (4.2ms)[0m  SELECT "feeds".* FROM "feeds" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  Rendered feeds/index.html.erb within layouts/application (10.6ms)
+Compiled custom.css  (1059ms)  (pid 4970)
+Compiled application.css  (3ms)  (pid 4970)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 1356ms (Views: 1346.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /permissions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /custom.css - 200 OK (7ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /feeds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /feeds.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 19:11:44 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2013-03-07 19:12:43 -0500
+Connecting to database specified by database.yml
+Processing by FeedsController#index as HTML
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ydSH7X18yIcYLN3KFdjF6g' LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 12
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 4 AND "permissions"."feed_id" = 14[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  Rendered feeds/index.html.erb within layouts/application (50.9ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 693ms (Views: 555.0ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /application.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /feeds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /custom.css - 200 OK (5ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /permissions.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /jquery.js - 200 OK (18ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /permissions.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /feeds.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /users.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:44 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:45 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:45 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:45 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:45 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:45 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:45 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:45 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:45 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:45 -0500
+Served asset /bootstrap.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-07 19:12:45 -0500
+Served asset /application.js - 304 Not Modified (66ms)
